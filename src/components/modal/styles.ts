@@ -20,7 +20,7 @@ export const ModalContainer = styled.div `
     flex-direction: row;
 `
 
-export const ContainerImage = styled.div `
+export const ImageContainer = styled.div `
 
 `
 

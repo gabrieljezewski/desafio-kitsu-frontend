@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const CardAnimeStyled = styled.div `
+export const CardAnime = styled.div `
     margin-right: 50px;
     margin-bottom: 90px;
     width: 142px;

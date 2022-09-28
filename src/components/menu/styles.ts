@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const HeaderStyled = styled.header `
+export const Header = styled.header `
     display: flex;
     align-items: center;
     box-sizing: border-box;
@@ -8,12 +8,12 @@ export const HeaderStyled = styled.header `
     background: linear-gradient(180deg, #081C42 0%, rgba(15, 105, 170, 0.62) 100%);
 `
 
-export const LogoStyled = styled.div `
+export const Logo = styled.div `
     padding: 15px;
     margin-left: 65px;
 `
 
-export const MenuStyled = styled.nav `
+export const Menu = styled.nav `
     flex-grow: 10;
 
     ul {
@@ -35,7 +35,7 @@ export const MenuStyled = styled.nav `
     }
 `
 
-export const SearchContainerStyled = styled.div `
+export const SearchContainer = styled.div `
     margin-right: 110px;
 
     input {
@@ -62,6 +62,6 @@ export const SearchContainerStyled = styled.div `
     }
 `
 
-export const IconHeartStyled = styled.div `
+export const IconHeart = styled.div `
     margin-right: 77px;
 `

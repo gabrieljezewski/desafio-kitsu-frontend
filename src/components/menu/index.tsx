@@ -6,11 +6,11 @@ import * as S from './styles'
 import { Link } from 'react-router-dom'
 
 const Menu = () => (
-    <S.HeaderStyled>
-        <S.LogoStyled>
+    <S.Header>
+        <S.Logo>
             <img src={imgLogo} alt="Logo Firedev" />
-        </S.LogoStyled>
-        <S.MenuStyled>
+        </S.Logo>
+        <S.Menu>
             <ul>
                 <li>
                     <Link to="/anime">ANIME</Link>
@@ -19,19 +19,19 @@ const Menu = () => (
                     <Link to="/manga">MANGA</Link>
                 </li>
             </ul>
-        </S.MenuStyled>
-        <S.SearchContainerStyled>
+        </S.Menu>
+        <S.SearchContainer>
             <input type="text" />
             <Link to="/">
                 <img src={iconSearch} alt="Search" />
             </Link>
-        </S.SearchContainerStyled>
-        <S.IconHeartStyled>
+        </S.SearchContainer>
+        <S.IconHeart>
             <Link to="/">
                 <img src={iconHeart} alt="Favorites" />
             </Link>
-        </S.IconHeartStyled>
-    </S.HeaderStyled>
+        </S.IconHeart>
+    </S.Header>
 )
 
 export default Menu

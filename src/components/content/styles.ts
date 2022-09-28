@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const MainStyled = styled.main `
+export const Main = styled.main `
     padding: 2%;
 
     h1 {

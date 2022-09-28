@@ -8,10 +8,10 @@ interface CardProps {
 
 const Card = (props:CardProps) => {
     return (
-        <S.CardAnimeStyled onClick={props.onClick}>
+        <S.CardAnime onClick={props.onClick}>
             <img src={props.img} alt="Imagem do Anime"/>
             <h2>{props.title}</h2>
-        </S.CardAnimeStyled>
+        </S.CardAnime>
     )
 }
 

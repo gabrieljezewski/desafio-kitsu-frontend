@@ -4,12 +4,12 @@ import Anime from '../../pages/Anime'
 import Manga from '../../pages/Manga'
 
 const Content = () => (
-    <S.MainStyled>
+    <S.Main>
         <Routes>
             <Route path="/anime" element={<Anime />} />
             <Route path="/manga" element={<Manga/>} />
         </Routes>
-    </S.MainStyled>
+    </S.Main>
 )
 
 export default Content

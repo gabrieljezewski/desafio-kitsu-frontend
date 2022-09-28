@@ -36,11 +36,11 @@ const Anime = () => {
     }
     
     return (
-        <S.AnimeContainerStyled>
-            <S.AnimeTitleStyled>
+        <S.AnimeContainer>
+            <S.Title>
                 Animes mais populares
-            </S.AnimeTitleStyled>
-            <S.CardsAnimeStyled>
+            </S.Title>
+            <S.CardsAnime>
                 {animeData.map((item) => {
                     return (
                         <Card
@@ -51,7 +51,7 @@ const Anime = () => {
                         />
                     )
                 })}
-            </S.CardsAnimeStyled>
+            </S.CardsAnime>
             {isModalVisible ? (
                 <Modal
                     img={modalData.attributes.posterImage.tiny}
@@ -62,7 +62,7 @@ const Anime = () => {
                     synopsis={modalData.attributes.synopsis}
                 />
                 ) : null}
-        </S.AnimeContainerStyled>
+        </S.AnimeContainer>
     )
 }
 

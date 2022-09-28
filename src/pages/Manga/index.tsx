@@ -23,22 +23,22 @@ const Manga = () => {
     }, [])
 
     return (
-        <S.MangaContainerStyled>
-            <S.MangaTitleStyled>
+        <S.MangaContainer>
+            <S.Title>
                 Animes mais populares
-            </S.MangaTitleStyled>
-            <S.CardsAnimeStyled>
+            </S.Title>
+            <S.CardsManga>
                 {dataManga.map((manga) => {
                     return (
-                        <Card 
+                        <Card
                             key={manga.attributes.canonicalTitle}
                             img={manga.attributes.posterImage.tiny}
                             title={manga.attributes.canonicalTitle}
                         />
                     )
                 })}
-            </S.CardsAnimeStyled>
-        </S.MangaContainerStyled>
+            </S.CardsManga>
+        </S.MangaContainer>
     )
 }
 

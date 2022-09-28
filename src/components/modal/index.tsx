@@ -16,9 +16,9 @@ const Modal = (props:ModalProps) => {
     return (
         <S.Modal>
             <S.ModalContainer>
-                <S.ContainerImage>
+                <S.ImageContainer>
                     <img src={props.img} />
-                </S.ContainerImage>
+                </S.ImageContainer>
                 <S.Title>
                     <h1>{props.title}</h1>
                     <img src={iconHeart} />

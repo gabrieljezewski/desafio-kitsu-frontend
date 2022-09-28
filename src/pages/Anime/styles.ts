@@ -1,14 +1,14 @@
 import styled from 'styled-components'
 
-export const AnimeContainerStyled = styled.div `
+export const AnimeContainer = styled.div `
     margin: 1%;
 `
 
-export const AnimeTitleStyled = styled.h1 `
+export const Title = styled.h1 `
     margin-left: 30px;
 `
 
-export const CardsAnimeStyled = styled.div `
+export const CardsAnime = styled.div `
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
