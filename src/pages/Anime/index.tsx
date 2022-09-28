@@ -3,44 +3,65 @@ import api from '../../services/api'
 
 import * as S from './styles'
 import Card from '../../components/card'
+import Modal from '../../components/modal'
+
 
 interface Anime {
     attributes: {
         canonicalTitle: string;
         posterImage: any;
+        popularityRank: number;
+        averageRating: number;
+        episodeCount: number;
+        synopsis: string;
     }
 }
 
 const Anime = () => {
-    const [dataAnime, setDataAnime] = useState<Anime[]>([]);
+    const [animeData, setAnimeData] = useState<Anime[]>([]);
     const [isModalVisible, setIsModalVisible] = useState(false)
+    const [modalData, setModalData]: any = useState({});
     
     useEffect(() => {
         api.get("anime").then((response) => {
-            setDataAnime(response.data.data)
+            setAnimeData(response.data.data)
         }).catch(() => {
             console.log("Error")
         })
     }, [])
 
+    const openModal = (item: any) => {
+        setIsModalVisible(true)
+        setModalData(item)
+    }
+    
     return (
         <S.AnimeContainerStyled>
             <S.AnimeTitleStyled>
                 Animes mais populares
             </S.AnimeTitleStyled>
             <S.CardsAnimeStyled>
-                {dataAnime.map((anime) => {
+                {animeData.map((item) => {
                     return (
                         <Card
-                            key={anime.attributes.canonicalTitle}
-                            img={anime.attributes.posterImage.tiny}
-                            title={anime.attributes.canonicalTitle}
-                            onClick={() => setIsModalVisible(true)}
+                            key={item.attributes.canonicalTitle}
+                            img={item.attributes.posterImage.tiny}
+                            title={item.attributes.canonicalTitle}
+                            onClick={() => openModal(item)}
                         />
                     )
                 })}
             </S.CardsAnimeStyled>
-            {isModalVisible ? <h1>Modal</h1> : null}
+            {isModalVisible ? (
+                <Modal
+                    img={modalData.attributes.posterImage.tiny}
+                    title={modalData.attributes.canonicalTitle}
+                    position={modalData.attributes.popularityRank}
+                    evaluation={modalData.attributes.averageRating}
+                    chapters={modalData.attributes.episodeCount}
+                    synopsis={modalData.attributes.synopsis}
+                />
+                ) : null}
         </S.AnimeContainerStyled>
     )
 }
