@@ -19,20 +19,28 @@ const Modal = (props:ModalProps) => {
                 <S.ImageContainer>
                     <img src={props.img} />
                 </S.ImageContainer>
-                <S.Title>
-                    <h1>{props.title}</h1>
-                    <img src={iconHeart} />
-                </S.Title>
-                <S.Attributes>
-                    <p>Posição: {props.position}</p>
-                    <p>Capítulos/Epsiódeos: {props.chapters}</p>
-                    <img src={iconStar} />
-                    <p>Avaliação: {props.evaluation}</p>
-                </S.Attributes>
-                <S.Sinopse>
-                    <h2>Sinopse</h2>
-                    <p>{props.synopsis}</p>
-                </S.Sinopse>
+                <S.AttributesContainer>
+                    <S.Title>
+                        <h1>{props.title}</h1>
+                        <img src={iconHeart} />
+                    </S.Title>
+                    <S.Attributes>
+                        <S.ChaptersContainer>
+                            <p>Posição: {props.position}</p>
+                            <p>Capítulos/Epsiódeos: {props.chapters}</p>
+                        </S.ChaptersContainer>
+                        <S.IconStarContainer>
+                            <img src={iconStar} />
+                        </S.IconStarContainer>
+                        <S.EvaluationContainer>
+                            <p>Avaliação: {props.evaluation}</p>
+                        </S.EvaluationContainer>
+                    </S.Attributes>
+                    <S.Sinopse>
+                        <h2>Sinopse</h2>
+                        <p>{props.synopsis}</p>
+                    </S.Sinopse>
+                </S.AttributesContainer>
             </S.ModalContainer>
         </S.Modal>
     )
