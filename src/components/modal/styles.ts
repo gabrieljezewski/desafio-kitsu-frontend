@@ -96,6 +96,7 @@ export const Sinopse = styled.div `
 
     p {
         font-family: 'Roboto';
+        text-align: justify;
         font-style: normal;
         font-weight: 400;
         font-size: 16px;
