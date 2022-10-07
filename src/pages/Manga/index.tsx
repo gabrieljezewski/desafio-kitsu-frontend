@@ -3,24 +3,36 @@ import api from '../../services/api'
 
 import * as S from './styles'
 import Card from '../../components/card'
+import Modal from '../../components/modal'
 
 interface Manga {
     attributes: {
         canonicalTitle: string;
         posterImage: any;
+        popularityRank: number;
+        averageRating: number;
+        episodeCount: number;
+        synopsis: string;
     }
 }
 
 const Manga = () => {
-    const [dataManga, setDataManga] = useState<Manga[]>([]);
+    const [mangaData, setmangaData] = useState<Manga[]>([]);
+    const [isModalVisible, setIsModalVisible] = useState(false)
+    const [modalData, setModalData]: any = useState({});
 
     useEffect(() => {
         api.get("manga").then((response) => {
-            setDataManga(response.data.data)
+            setmangaData(response.data.data)
         }).catch(() => {
             console.log("Error")
         })
     }, [])
+
+    const openModal = (item: any) => {
+        setIsModalVisible(true)
+        setModalData(item)
+    }
 
     return (
         <S.MangaContainer>
@@ -28,16 +40,27 @@ const Manga = () => {
                 Animes mais populares
             </S.Title>
             <S.CardsManga>
-                {dataManga.map((manga) => {
+                {mangaData.map((item) => {
                     return (
                         <Card
-                            key={manga.attributes.canonicalTitle}
-                            img={manga.attributes.posterImage.tiny}
-                            title={manga.attributes.canonicalTitle}
+                            key={item.attributes.canonicalTitle}
+                            img={item.attributes.posterImage.tiny}
+                            title={item.attributes.canonicalTitle}
+                            onClick={() => openModal(item)}
                         />
                     )
                 })}
             </S.CardsManga>
+            {isModalVisible ? (
+                <Modal
+                    img={modalData.attributes.posterImage.tiny}
+                    title={modalData.attributes.canonicalTitle}
+                    position={modalData.attributes.popularityRank}
+                    evaluation={modalData.attributes.averageRating}
+                    chapters={modalData.attributes.episodeCount}
+                    synopsis={modalData.attributes.synopsis}
+                />
+                ) : null}
         </S.MangaContainer>
     )
 }
