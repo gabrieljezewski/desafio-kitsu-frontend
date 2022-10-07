@@ -59,8 +59,11 @@ export const ChaptersContainer = styled.div `
     margin-left: 40px;
 
     p {
-        font-family: 'Poppins';
+        font-family: 'Roboto';
         color: #000;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
     }
 `
 
@@ -73,15 +76,28 @@ export const IconStarContainer = styled.div `
 `
 export const EvaluationContainer = styled.div `
     p {
-        font-family: 'Poppins';
+        font-family: 'Roboto';
         color: #000;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        margin-left: 5px;
     }
 `
 
 export const Sinopse = styled.div `
     margin-left: 40px;
 
+    h2 {
+        font-family: 'Roboto';
+        font-weight: 500;
+        font-size: 20px;
+    }
+
     p {
-        
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
     }
 `
