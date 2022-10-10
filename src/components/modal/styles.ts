@@ -16,13 +16,15 @@ export const ModalContainer = styled.div `
     display: flex;
     padding: 2%;
     width: 890px;
-    height: 507px;
+    height: 470px;
     border-radius: 8px;
     background-color: #F3F2F2;
 `
 
 export const ImageContainer = styled.div `
     display: flex;
+    justify-content: center;
+    align-items: center;
     img {
         width: 317px;
         height: 420px;

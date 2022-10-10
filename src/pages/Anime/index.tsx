@@ -18,9 +18,9 @@ interface Anime {
 }
 
 const Anime = () => {
-    const [animeData, setAnimeData] = useState<Anime[]>([]);
+    const [animeData, setAnimeData] = useState<Anime[]>([])
     const [isModalVisible, setIsModalVisible] = useState(false)
-    const [modalData, setModalData]: any = useState({});
+    const [modalData, setModalData]: any = useState({})
     
     useEffect(() => {
         api.get("anime").then((response) => {
