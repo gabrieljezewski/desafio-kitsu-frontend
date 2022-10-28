@@ -30,7 +30,7 @@ const Anime = () => {
         })
     }, [])
 
-    const openModal = (item: any) => {
+    const openModal = (item: Anime) => {
         setIsModalVisible(true)
         setModalData(item)
     }
@@ -59,7 +59,7 @@ const Anime = () => {
                     position={modalData.attributes.popularityRank}
                     evaluation={modalData.attributes.averageRating}
                     chapters={modalData.attributes.episodeCount}
-                    synopsis={modalData.attributes.synopsis}
+                    synopsis={modalData.attributes.synopsis}                  
                 />
                 ) : null}
         </S.AnimeContainer>

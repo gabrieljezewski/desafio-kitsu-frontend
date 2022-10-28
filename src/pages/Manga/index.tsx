@@ -29,7 +29,7 @@ const Manga = () => {
         })
     }, [])
 
-    const openModal = (item: any) => {
+    const openModal = (item: Manga) => {
         setIsModalVisible(true)
         setModalData(item)
     }
