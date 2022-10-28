@@ -1,7 +1,7 @@
 import * as S from './styles'
 
 interface CardProps {
-    img: any;
+    image: any;
     title: string;
     onClick: () => void;
 }
@@ -9,7 +9,7 @@ interface CardProps {
 const Card = (props:CardProps) => {
     return (
         <S.CardAnime onClick={props.onClick}>
-            <img src={props.img} alt="Imagem do Anime"/>
+            <img src={props.image} alt="Imagem do Anime"/>
             <h2>{props.title}</h2>
         </S.CardAnime>
     )

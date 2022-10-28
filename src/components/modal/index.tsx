@@ -4,7 +4,7 @@ import iconStar from '../../assets/iconStar.svg'
 import * as S from './styles'
 
 interface ModalProps {
-    img: any;
+    image: any;
     title: string;
     position: string;
     chapters: string;
@@ -17,7 +17,7 @@ const Modal = (props:ModalProps) => {
         <S.Modal>
             <S.ModalContainer>
                 <S.ImageContainer>
-                    <img src={props.img} />
+                    <img src={props.image} />
                 </S.ImageContainer>
                 <S.AttributesContainer>
                     <S.Title>

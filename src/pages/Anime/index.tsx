@@ -45,7 +45,7 @@ const Anime = () => {
                     return (
                         <Card
                             key={item.attributes.canonicalTitle}
-                            img={item.attributes.posterImage.tiny}
+                            image={item.attributes.posterImage.tiny}
                             title={item.attributes.canonicalTitle}
                             onClick={() => openModal(item)}
                         />
@@ -54,7 +54,7 @@ const Anime = () => {
             </S.CardsAnime>
             {isModalVisible ? (
                 <Modal
-                    img={modalData.attributes.posterImage.tiny}
+                    image={modalData.attributes.posterImage.tiny}
                     title={modalData.attributes.canonicalTitle}
                     position={modalData.attributes.popularityRank}
                     evaluation={modalData.attributes.averageRating}
