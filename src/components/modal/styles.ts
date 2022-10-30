@@ -42,7 +42,7 @@ export const Title = styled.div `
     justify-content: space-between;
     margin-left: 40px;
 
-    h1 {
+    h2 {
         font-size: 30px;
         font-family: 'Poppins';
         color: #000;

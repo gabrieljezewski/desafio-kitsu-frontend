@@ -1,13 +1,19 @@
-import { BrowserRouter as Router } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import Menu from './components/menu/index'
-import Content from './components/content/index'
+import Anime from './pages/Anime'
+import Manga from './pages/Manga'
+
+import * as S from './globalStyle'
 
 const App = () => (
   <>
-    <Router>
-      <Menu />
-      <Content />
-    </Router>
+    <Menu />
+    <S.Main>
+      <Routes>
+        <Route path="/anime" element={<Anime />} />
+        <Route path="/manga" element={<Manga />} />
+      </Routes>
+    </S.Main>
   </>
 )
 

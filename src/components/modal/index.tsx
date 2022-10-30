@@ -21,7 +21,7 @@ const Modal = (props:ModalProps) => {
                 </S.ImageContainer>
                 <S.AttributesContainer>
                     <S.Title>
-                        <h1>{props.title}</h1>
+                        <h2>{props.title}</h2>
                         <img src={iconHeart} />
                     </S.Title>
                     <S.Attributes>
