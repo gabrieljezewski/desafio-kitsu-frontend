@@ -5,7 +5,6 @@ import * as S from './styles'
 import Card from '../../components/card'
 import Modal from '../../components/modal'
 
-
 interface Anime {
     attributes: {
         canonicalTitle: string;
@@ -17,18 +16,18 @@ interface Anime {
     }
 }
 
-const Anime = () => {
+const Anime = ({input}: any) => {
     const [animeData, setAnimeData] = useState<Anime[]>([])
     const [isModalVisible, setIsModalVisible] = useState(false)
     const [modalData, setModalData]: any = useState({})
     
     useEffect(() => {
-        api.get("anime").then((response) => {
-            setAnimeData(response.data.data)
-        }).catch(() => {
-            console.log("Error")
-        })
-    }, [])
+            api.get(input.length > 0 ? `anime?filter[text]=${input}` : "anime").then((response) => {
+                setAnimeData(response.data.data)
+            }).catch(() => {
+                console.log("Error")
+            })
+    }, [input])
 
     const openModal = (item: Anime) => {
         setIsModalVisible(true)
@@ -54,6 +53,7 @@ const Anime = () => {
             </S.CardsAnime>
             {isModalVisible ? (
                 <Modal
+                    setIsModalVisible={setIsModalVisible}
                     image={modalData.attributes.posterImage.tiny}
                     title={modalData.attributes.canonicalTitle}
                     position={modalData.attributes.popularityRank}

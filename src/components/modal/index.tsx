@@ -10,11 +10,17 @@ interface ModalProps {
     chapters: string;
     evaluation: string;
     synopsis: string;
+    setIsModalVisible: any;
 }
 
 const Modal = (props:ModalProps) => {
+    const closeModal = () => {
+        props.setIsModalVisible(false)
+    }
+
     return (
-        <S.Modal>
+        <>
+            <S.BackgroundModal onClick={closeModal} />
             <S.ModalContainer>
                 <S.ImageContainer>
                     <img src={props.image} />
@@ -27,13 +33,21 @@ const Modal = (props:ModalProps) => {
                     <S.Attributes>
                         <S.ChaptersContainer>
                             <p>Posição: {props.position}</p>
-                            <p>Capítulos/Epsiódeos: {props.chapters}</p>
+                            {props.chapters === null ? (
+                                <p>Capítulos/Epsiódeos: Não informado</p>
+                            ) : (
+                                <p>Capítulos/Epsiódeos: {props.chapters}</p>
+                            )}
                         </S.ChaptersContainer>
                         <S.IconStarContainer>
                             <img src={iconStar} />
                         </S.IconStarContainer>
                         <S.EvaluationContainer>
-                            <p>Avaliação: {props.evaluation}</p>
+                            {props.evaluation === null ? (
+                                <p>Avaliação: Não informado</p>
+                            ) : (
+                                <p>Avaliação: {props.evaluation}</p>
+                            )}
                         </S.EvaluationContainer>
                     </S.Attributes>
                     <S.Sinopse>
@@ -42,7 +56,7 @@ const Modal = (props:ModalProps) => {
                     </S.Sinopse>
                 </S.AttributesContainer>
             </S.ModalContainer>
-        </S.Modal>
+        </>
     )
 }
 

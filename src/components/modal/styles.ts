@@ -1,22 +1,23 @@
 import styled from 'styled-components'
 
-export const Modal = styled.div `
+export const BackgroundModal = styled.div `
     width: 100%;
     height: 100vh;
-    position: fixed;
     top: 0;
     left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: fixed;
     background-color: rgba(14, 13, 13, 0.47);
 `
 
 export const ModalContainer = styled.div `
     display: flex;
-    padding: 2%;
+    overflow: hidden;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 3%;
     width: 890px;
-    height: 470px;
     border-radius: 8px;
     background-color: #F3F2F2;
 `
@@ -24,7 +25,7 @@ export const ModalContainer = styled.div `
 export const ImageContainer = styled.div `
     display: flex;
     justify-content: center;
-    align-items: center;
+
     img {
         width: 317px;
         height: 420px;
@@ -43,13 +44,16 @@ export const Title = styled.div `
     margin-left: 40px;
 
     h2 {
+        margin: 0;
+        padding: 0;
         font-size: 30px;
         font-family: 'Poppins';
         color: #000;
     }
 
     img {
-        position: relative;
+        width: 40px;
+        height: 40px;
     }
 `
 
@@ -88,7 +92,11 @@ export const EvaluationContainer = styled.div `
 `
 
 export const Sinopse = styled.div `
+    display: flex;
+    flex-direction: column;
+    max-height: 240px;
     margin-left: 40px;
+    overflow: hidden;
 
     h2 {
         font-family: 'Roboto';
@@ -97,6 +105,7 @@ export const Sinopse = styled.div `
     }
 
     p {
+        
         font-family: 'Roboto';
         text-align: justify;
         font-style: normal;

@@ -16,18 +16,19 @@ interface Manga {
     }
 }
 
-const Manga = () => {
-    const [mangaData, setmangaData] = useState<Manga[]>([]);
+const Manga = ({input}: any) => {
+    const [mangaData, setMangaData] = useState<Manga[]>([]);
     const [isModalVisible, setIsModalVisible] = useState(false)
     const [modalData, setModalData]: any = useState({});
 
     useEffect(() => {
-        api.get("manga").then((response) => {
-            setmangaData(response.data.data)
+        api.get(input.length > 0 ? `manga?filter[text]=${input}` : "manga").then((response) => {
+            setMangaData(response.data.data)
         }).catch(() => {
             console.log("Error")
         })
-    }, [])
+}, [input])
+        console.log(mangaData)
 
     const openModal = (item: Manga) => {
         setIsModalVisible(true)
@@ -53,11 +54,12 @@ const Manga = () => {
             </S.CardsManga>
             {isModalVisible ? (
                 <Modal
+                    setIsModalVisible={setIsModalVisible}
                     image={modalData.attributes.posterImage.tiny}
                     title={modalData.attributes.canonicalTitle}
                     position={modalData.attributes.popularityRank}
                     evaluation={modalData.attributes.averageRating}
-                    chapters={modalData.attributes.episodeCount}
+                    chapters={modalData.attributes.chapterCount}
                     synopsis={modalData.attributes.synopsis}
                 />
                 ) : null}
