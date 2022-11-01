@@ -5,7 +5,7 @@ export const MangaContainer = styled.div `
 `
 
 export const Title = styled.h1 `
-    margin-left: 30px;
+    margin-left: 100px;
 `
 
 export const CardsManga = styled.div `
