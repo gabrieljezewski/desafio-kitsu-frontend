@@ -52,6 +52,7 @@ export const Title = styled.div `
     }
 
     img {
+        cursor: pointer;
         width: 40px;
         height: 40px;
     }

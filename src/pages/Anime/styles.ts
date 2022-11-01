@@ -2,10 +2,11 @@ import styled from 'styled-components'
 
 export const AnimeContainer = styled.div `
     margin: 1%;
+    width: auto;
 `
 
 export const Title = styled.h1 `
-    margin-left: 30px;
+    margin-left: 100px;
 `
 
 export const CardsAnime = styled.div `

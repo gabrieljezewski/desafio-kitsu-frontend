@@ -11,6 +11,10 @@ export const Header = styled.header `
 export const Logo = styled.div `
     padding: 15px;
     margin-left: 65px;
+
+    @media (max-width: 864px) {
+        margin-left: 0px;
+    }
 `
 
 export const Menu = styled.nav `
@@ -25,6 +29,10 @@ export const Menu = styled.nav `
         display: inline-block;
         margin-top: 10px;
         margin-right: 50px;
+    }
+
+    @media (max-width: 864px) {
+        margin-right: 0px;
     }
 
     a {
