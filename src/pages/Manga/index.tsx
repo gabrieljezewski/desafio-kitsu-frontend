@@ -38,7 +38,7 @@ const Manga = ({input}: any) => {
     return (
         <S.MangaContainer>
             <S.Title>
-                Animes mais populares
+                Mangas mais populares
             </S.Title>
             <S.CardsManga>
                 {mangaData.map((item) => {
