@@ -20,6 +20,11 @@ export const ModalContainer = styled.div `
     width: 890px;
     border-radius: 8px;
     background-color: #F3F2F2;
+
+    @media (max-width: 864px) {
+        width: 350px;
+        height: 230px;
+    }
 `
 
 export const ImageContainer = styled.div `
@@ -31,6 +36,13 @@ export const ImageContainer = styled.div `
         height: 420px;
         border-radius: 4px;
      }
+
+     @media (max-width: 864px) {
+        img {
+            width: 170px;
+            height: 208px;
+        }
+    }
 `
 
 export const AttributesContainer = styled.div `
@@ -56,6 +68,21 @@ export const Title = styled.div `
         width: 40px;
         height: 40px;
     }
+
+    @media (max-width: 864px) {
+        justify-content: space-between;
+        margin: 0px;
+
+        h2 {
+            font-size: 12px;
+            margin-left: 10px;
+        }
+
+        img {
+            width: 20px;
+            height: 15px;
+        }
+    }
 `
 
 export const Attributes = styled.div `
@@ -72,6 +99,15 @@ export const ChaptersContainer = styled.div `
         font-style: normal;
         font-weight: 500;
     }
+
+    @media (max-width: 864px) {
+        margin: 0px;
+        
+        p {
+            margin-left: 10px;
+            font-size: 8px;
+        }
+    }
 `
 
 export const IconStarContainer = styled.div `
@@ -79,6 +115,15 @@ export const IconStarContainer = styled.div `
         position: relative;
         margin-top: 15px;
         margin-left: 20px;
+    }
+
+    @media (max-width: 864px) {
+        img {
+            width: 20px;
+            height: 15px;
+            margin-left: 0px;
+            margin-top: 4px;
+        }
     }
 `
 export const EvaluationContainer = styled.div `
@@ -88,7 +133,13 @@ export const EvaluationContainer = styled.div `
         font-size: 16px;
         font-style: normal;
         font-weight: 500;
-        margin-left: 5px;
+        margin-left: 0px;
+    }
+
+    @media (max-width: 864px) {
+        p {
+            font-size: 8px;
+        }
     }
 `
 
@@ -112,5 +163,20 @@ export const Sinopse = styled.div `
         font-style: normal;
         font-weight: 400;
         font-size: 16px;
+    }
+
+    @media (max-width: 864px) {
+        margin: 0px;
+
+        h2 {
+            font-size: 12px;
+            margin-left: 10px;
+        }
+
+        p {
+            font-size: 8px;
+            margin-left: 10px;
+            margin-top: 0px;
+        }
     }
 `
