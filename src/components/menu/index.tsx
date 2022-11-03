@@ -10,7 +10,9 @@ const Menu = ({setInput, input}: any) => {
     return (
         <S.Header>
                 <S.Logo>
-                    <img src={imgLogo} alt="Logo Firedev" />
+                    <Link to="/">
+                        <img src={imgLogo} alt="Logo Firedev" />
+                    </Link>
                 </S.Logo>
                 <S.Menu>
                     <ul>
