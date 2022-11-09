@@ -19,7 +19,7 @@ const App = () => {
           <Route path="/manga" element={<Manga input={input} />} />
         </Routes>
       </S.Main>
-  </>
+    </>
   )
 }
 

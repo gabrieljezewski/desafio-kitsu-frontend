@@ -21,7 +21,7 @@ export const ModalContainer = styled.div `
     border-radius: 8px;
     background-color: #F3F2F2;
 
-    @media (max-width: 864px) {
+    @media (max-width: 930px) {
         width: 350px;
         height: 230px;
     }
@@ -37,7 +37,7 @@ export const ImageContainer = styled.div `
         border-radius: 4px;
      }
 
-     @media (max-width: 864px) {
+     @media (max-width: 930px) {
         img {
             width: 170px;
             height: 208px;
@@ -69,7 +69,7 @@ export const Title = styled.div `
         height: 40px;
     }
 
-    @media (max-width: 864px) {
+    @media (max-width: 930px) {
         justify-content: space-between;
         margin: 0px;
 
@@ -100,7 +100,7 @@ export const ChaptersContainer = styled.div `
         font-weight: 500;
     }
 
-    @media (max-width: 864px) {
+    @media (max-width: 930px) {
         margin: 0px;
         
         p {
@@ -117,7 +117,7 @@ export const IconStarContainer = styled.div `
         margin-left: 20px;
     }
 
-    @media (max-width: 864px) {
+    @media (max-width: 930px) {
         img {
             width: 20px;
             height: 15px;
@@ -136,7 +136,7 @@ export const EvaluationContainer = styled.div `
         margin-left: 0px;
     }
 
-    @media (max-width: 864px) {
+    @media (max-width: 930px) {
         p {
             font-size: 8px;
         }
@@ -165,7 +165,7 @@ export const Sinopse = styled.div `
         font-size: 16px;
     }
 
-    @media (max-width: 864px) {
+    @media (max-width: 930px) {
         margin: 0px;
 
         h2 {

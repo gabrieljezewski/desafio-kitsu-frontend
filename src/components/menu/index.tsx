@@ -5,7 +5,7 @@ import iconHeart from '../../assets/iconFavorites.svg'
 import * as S from './styles'
 import { Link } from 'react-router-dom'
 
-const Menu = ({setInput, input}: any) => {
+const Menu = ({input, setInput}: any) => {
 
     return (
         <S.Header>

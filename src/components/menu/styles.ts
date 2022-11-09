@@ -7,7 +7,7 @@ export const Header = styled.header `
     height: 68px;
     background: linear-gradient(180deg, #081C42 0%, rgba(15, 105, 170, 0.62) 100%);
 
-    @media (max-width: 864px) {
+    @media (max-width: 930px) {
         height: 50px;
     }
 `
@@ -16,7 +16,7 @@ export const Logo = styled.div `
     padding: 15px;
     margin-left: 65px;
 
-    @media (max-width: 864px) {
+    @media (max-width: 930px) {
         padding-left: 2px;
         margin-left: 0px;
 
@@ -51,7 +51,7 @@ export const Menu = styled.nav `
         text-decoration: none;
     }
 
-    @media (max-width: 864px) {
+    @media (max-width: 930px) {
         ul {
             padding: 0px;
         }
@@ -92,7 +92,7 @@ export const SearchContainer = styled.div `
         padding-top: 6px;
     }
 
-    @media (max-width: 864px) {
+    @media (max-width: 930px) {
         margin-right: 10px;
 
         input {
@@ -117,7 +117,7 @@ export const SearchContainer = styled.div `
 export const IconHeart = styled.div `
     margin-right: 77px;
 
-    @media (max-width: 864px) {
+    @media (max-width: 930px) {
         padding: 5px;
         margin: 0px;
         margin-top: 5px;

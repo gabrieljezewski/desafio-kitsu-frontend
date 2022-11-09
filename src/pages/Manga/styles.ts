@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const MangaContainer = styled.div `
     margin: 1%;
 
-    @media (max-width: 864px) {
+    @media (max-width: 930px) {
         margin: 0px;
         padding: 0px;
     }
@@ -12,7 +12,7 @@ export const MangaContainer = styled.div `
 export const Title = styled.h1 `
     margin-left: 100px;
 
-    @media (max-width: 864px) {
+    @media (max-width: 930px) {
         font-size: 16px;
         margin: 0px;
         padding: 2%;
@@ -26,7 +26,7 @@ export const CardsManga = styled.div `
     width: 100%;
     margin-top: 107px;
 
-    @media (max-width: 864px) {
+    @media (max-width: 930px) {
         margin: 0px;
     }
 `

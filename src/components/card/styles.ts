@@ -19,7 +19,7 @@ export const CardAnime = styled.div `
         color: #fff;
     }
 
-    @media (max-width: 864px) {
+    @media (max-width: 930px) {
         padding: 0px;
         margin: 0px;
         margin-top: 28px;
