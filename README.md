@@ -52,12 +52,18 @@ Após isso, no console do terminal irá apresentar em qual url:porta o servidor 
 # Screenshot
 
 <p>Animes mais populares.</p>
-<img alt="Rocket.Q" title="Rocket.Q" src="/src/assets/pagAnimes.PNG" width="1000px" />
+<img src="/src/assets/pagAnimes.PNG" />
 
 <p>Mangás mais populares</p>
-<img alt="Rocket.Q" title="Rocket.Q" src="/src/assets/pagMangas.PNG" width="1000px" />
+<img src="/src/assets/pagMangas.PNG" />
 
 <p>Modal</p>
-<img alt="Rocket.Q" title="Rocket.Q" src="/src/assets/modal.PNG" width="1000px" />
+<img src="/src/assets/modal.PNG" />
+
+<p>Página Mobile</p>
+<img src="/src/assets/pagMobile.PNG" width="390px" heigth="844px" />
+
+<p>Modal Mobile</p>
+<img src="/src/assets/modalMobile.PNG" width="390px" heigth="844px" />
 
 Made with by <a href="https://www.linkedin.com/in/gabrieljezewski/">Gabriel Jezewski</a>.
