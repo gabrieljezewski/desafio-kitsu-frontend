@@ -65,5 +65,3 @@ Após isso, no console do terminal irá apresentar em qual url:porta o servidor 
 
 <p>Modal Mobile</p>
 <img src="/src/assets/modalMobile.PNG" width="390px" heigth="844px" />
-
-Made with by <a href="https://www.linkedin.com/in/gabrieljezewski/">Gabriel Jezewski</a>.
